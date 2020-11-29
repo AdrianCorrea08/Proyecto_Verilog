@@ -1,0 +1,30 @@
+$date
+	Sun Nov 29 10:38:44 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module InstructionMemory_tb $end
+$var wire 8 ! instruction [7:0] $end
+$var reg 8 " address [7:0] $end
+$var reg 1 # clk $end
+$scope module im $end
+$var wire 8 $ address [7:0] $end
+$var wire 1 # clk $end
+$var reg 8 % instruction [7:0] $end
+$var reg 8 & memAddr [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx &
+bx %
+bx $
+x#
+bx "
+bx !
+$end
