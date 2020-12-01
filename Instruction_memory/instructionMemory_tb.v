@@ -19,6 +19,7 @@ initial begin
 	$dumpfile("InstructionMemory_tb.vcd");
 	$dumpvars;
     
+	
 
 end
 always begin
