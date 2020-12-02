@@ -1,29 +1,31 @@
 `timescale 1ns/1ns
-`include "InstructionMemory.v"
+`include "instructionMemory.v"
 
-module InstructionMemory_tb;
+module instructionMemory_tb;
 
-reg clk;
-reg  [3:0] address0;
-reg  [3:1] address1;
-reg  [3:2] address2;
-reg  [3:3] address3;
+reg clk = 0;
+reg  [7:0]	address;
 wire [31:0]	 instruction;
 
 InstructionMemory im(clk, address, instruction);
 
-assign instruction = {address0,address1,address2,address3};
 
 initial begin
 
 	$dumpfile("InstructionMemory_tb.vcd");
 	$dumpvars;
-    
-
+  address = 'b0;
+	$monitor ($realtime, " Instruction = %0b" , instruction);
+  repeat(4)
+	begin
+    #50;
+    address = address + 1'd1;
+  end
+  $finish;
 end
+
 always begin
-
 #10 clk = ~clk;
-
 end
+
 endmodule
