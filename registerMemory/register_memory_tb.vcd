@@ -1,0 +1,37 @@
+$date
+	Tue Dec 01 13:47:41 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module reg_file $end
+$var wire 1 ! CLK $end
+$var wire 8 " IN [7:0] $end
+$var wire 3 # INADDRESS [2:0] $end
+$var wire 8 $ OUT1 [7:0] $end
+$var wire 3 % OUT1ADDRESS [2:0] $end
+$var wire 8 & OUT2 [7:0] $end
+$var wire 3 ' OUT2ADDRESS [2:0] $end
+$var wire 1 ( RESET $end
+$var wire 1 ) WRITE $end
+$var integer 32 * i [31:0] $end
+$upscope $end
+$scope module register_memory_tb $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx *
+z)
+z(
+bz '
+bx &
+bz %
+bx $
+bz #
+bz "
+z!
+$end
