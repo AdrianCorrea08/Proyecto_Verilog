@@ -14,6 +14,7 @@ initial begin
 
 	$dumpfile("InstructionMemory_tb.vcd");
 	$dumpvars;
+<<<<<<< HEAD
   address = 'b0;
 	$monitor ($realtime, " Instruction = %0b" , instruction);
   repeat(4)
@@ -22,6 +23,11 @@ initial begin
     address = address + 1'd1;
   end
   $finish;
+=======
+    
+	
+
+>>>>>>> 873f1dcec3edaca9448bb1a00ed7143c72046871
 end
 
 always begin
