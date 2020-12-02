@@ -1,29 +1,11 @@
-module RegisterMemory( );
+module registerMemory(clk,readRegister1 ,readRegister2, writeRegister,writeData,control,data1,data2);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+input clk;
+input [19:15] readRegister1;
+input [24:20] readRegister2;
+input [11:7] writeRegister;
+//input [] writeData -->No se sabe, viene del multiplexor
+//preguntar la data1 y data2 de cuantos bits salen
 
 
 
