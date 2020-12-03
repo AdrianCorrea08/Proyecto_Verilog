@@ -1,4 +1,4 @@
-module registerMemory(clk,readRegister1 ,readRegister2, writeRegister,writeData,control,data1,data2);
+module registerMemory(clk,rs1 ,rs2, writeRegister,writeData,control,data1,data2);
 
 input clk;
 input [19:15] readRegister1;
@@ -8,11 +8,7 @@ input [11:7] writeRegister;
 //preguntar la data1 y data2 de cuantos bits salen
 
 
-
-
-
-
-
+endmodule
 
 module reg_file(IN, OUT1, OUT2, INADDRESS, OUT1ADDRESS, OUT2ADDRESS, WRITE, CLK, RESET) ;
  //Initalizing inputs
