@@ -2,13 +2,17 @@
 ----------------------------------------------------------------------
 |opcode|   ALU Operation
 ----------------------------------------------------------------------
-| 0000  |   ALUresult = a & b;
+| 0000  |   ALUresult = A & B;
 ----------------------------------------------------------------------
-| 0001  |   ALUresult = a | b;
+| 0001  |   ALUresult = A | B;
 ----------------------------------------------------------------------
-| 0010  |   ALUresult = a + b;
+| 0010  |   ALUresult = A + B;
 ----------------------------------------------------------------------
-| 0110  |   ALUresult = a - b;
+| 0110  |   ALUresult = A - B;
+----------------------------------------------------------------------
+| 0111  |   ALUresult = slt;
+----------------------------------------------------------------------
+| 1100  |   ALUresult = nor;
 ---------------------------------------------------------------------*/
 
 module ALU(A,B,ALUcontrol,ALUresult,Zero);
@@ -20,7 +24,7 @@ module ALU(A,B,ALUcontrol,ALUresult,Zero);
  output reg [63:0] ALUresult;
  output Zero;
 
-// Cero es verdadero si ALUresult es 0; va a cualquier parte
+// Cero es verdadero si ALUresult es 0; va A cualquier parte
 assign Zero = (ALUresult == 0); 
 
 // Reevaluar si estas cambian
@@ -34,7 +38,7 @@ always @(ALUcontrol,A,B)
     6:  ALUresult <= A - B;
     7:  ALUresult <= A < B ? 1:0;
     12: ALUresult <= ~(A|B); // el resultado es nor
-    default : ALUresult <= 0;// por defecto a 0, no debería suceder;
+    default : ALUresult <= 0;// por defecto A 0, no debería suceder;
 
   endcase
 
