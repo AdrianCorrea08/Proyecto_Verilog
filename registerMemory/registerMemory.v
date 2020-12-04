@@ -1,11 +1,13 @@
+`timescale 1ns/ 1ns
 module registerMemory(clk,rs1 ,rs2, writeRegister,writeData,control,data1,data2);
 
 input clk;
-input [19:15] readRegister1;
-input [24:20] readRegister2;
-input [11:7] writeRegister;
-//input [] writeData -->No se sabe, viene del multiplexor
-//preguntar la data1 y data2 de cuantos bits salen
+input [19:15] rs1; 
+input [24:20] rs2; 
+input [11:7] writeRegister; //rd
+input [] writeData;
+output [31:0] data1;
+output [31:0] data2;
 
 
 endmodule
