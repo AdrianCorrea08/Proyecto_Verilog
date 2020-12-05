@@ -19,23 +19,25 @@ always
 endmodule*/
 
 
-module ALUcontrol(ALUop,FuncCode,ALUcontrol);
+module ALUcontrol(ALUop,FuncCode,FuncCodeSeven,ALU_Cnt);
 
 input [1:0] ALUop;
-input [5:0] FuncCode;
-output reg[3:0] ALUcontrol;
+input [2:0] FuncCode; ///FUNCT3 3 BITS [14-12]
+input FuncCodeSeven; //FUCT 7 POS 30
+output reg[3:0] ALU_Cnt;
 
-wire [7:0] ALUControlIn;
+input wire [5:0] ALUControlIn;
 
-assign ALUControlIn = {ALUop,FuncCode};
+assign ALUControlIn = {ALUop,FuncCode,FuncCodeSeven};
  always @(ALUControlIn)
-    case (ALUControlIn)
-        32: ALUcontrol <= 2;    //add
-        34: ALUcontrol <= 6;    //sub
-        36: ALUcontrol <= 0;    //and
-        37: ALUcontrol <= 1;    //or
-        39: ALUcontrol <= 12;   //nor
-        42: ALUcontrol <= 7;    //stl
-        default: ALUcontrol <= 15;
+    casex (ALUControlIn)
+        6'b100000: ALU_Cnt=4'b0010;  //add
+        6'b010000: ALU_Cnt=4'b0110;  //sub
+        6'b101110: ALU_Cnt=4'b0000;  //and
+        6'b101100: ALU_Cnt=4'b0001;  //or
+        6'b00011x: ALU_Cnt=4'b0010;  //ld
+        6'b10011x: ALU_Cnt=4'b0010;  //sd
+        6'b01000x: ALU_Cnt=4'b0110;  //beq
+        default: ALU_Cnt=4'b0000;
     endcase
 endmodule

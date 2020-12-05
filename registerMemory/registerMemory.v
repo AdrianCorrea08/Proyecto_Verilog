@@ -6,9 +6,9 @@ input    clk;      //La clk para activar la escritura
 input    RegWrite; //el control de escritura
 
 // los números de registro para leer o escribir
-input  [5:0] rs1;        
-input  [5:0] rs2;        
-input  [5:0] rd; 
+input  [4:0] rs1;        
+input  [4:0] rs2;        
+input  [4:0] rd;     
 
 //datos para escribir
 input  [63:0] WriteData; 

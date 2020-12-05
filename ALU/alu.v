@@ -32,13 +32,11 @@ always @(ALUcontrol,A,B)
 
   case(ALUcontrol)
 
-    0:  ALUresult <= A & B; 
-    1:  ALUresult <= A | B; 
-    2:  ALUresult <= A + B;
-    6:  ALUresult <= A - B;
-    7:  ALUresult <= A < B ? 1:0;
-    12: ALUresult <= ~(A|B); // el resultado es nor
-    default : ALUresult <= 0;// por defecto A 0, no debería suceder;
+    4'b0010:  ALUresult = A + B; //add  //ld sd
+    4'b0110:  ALUresult = A - B; //sub  //beq
+    4'b0000:  ALUresult = A & B; //and
+    4'b0001:  ALUresult = A | B; //or
+    default : ALUresult <= 0;// por defecto A= 0, no debería suceder;
 
   endcase
 

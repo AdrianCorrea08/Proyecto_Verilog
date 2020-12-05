@@ -18,7 +18,7 @@ module control_unit(
         end
         7'b0110011: //SUBSTRACT
         begin
-            alu_op =   2'b10;
+            alu_op =   2'b01;
             branch =   1'b0;
             memRead =  1'b0;
             memToReg = 1'b0;
@@ -60,7 +60,7 @@ module control_unit(
         end
         7'b0100011: //SD
         begin
-        alu_op =   2'b00;
+        alu_op =   2'b10;
         branch =   1'b0;
         memRead =  1'b0;
         memWrite = 1'b1;
