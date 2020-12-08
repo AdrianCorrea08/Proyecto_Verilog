@@ -1,0 +1,42 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-965-g55e06db6)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000000001b6590 .scope module, "Programcounter" "Programcounter" 2 3;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "reset";
+    .port_info 2 /OUTPUT 8 "cont";
+o00000000008a69b8 .functor BUFZ 1, C4<z>; HiZ drive
+v00000000001b6720_0 .net "clk", 0 0, o00000000008a69b8;  0 drivers
+v00000000001b67c0_0 .var "cont", 7 0;
+o00000000008a6a18 .functor BUFZ 1, C4<z>; HiZ drive
+v00000000001b6860_0 .net "reset", 0 0, o00000000008a6a18;  0 drivers
+E_00000000008a4a50 .event posedge, v00000000001b6720_0;
+    .scope S_00000000001b6590;
+T_0 ;
+    %wait E_00000000008a4a50;
+    %load/vec4 v00000000001b6860_0;
+    %nor/r;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %load/vec4 v00000000001b67c0_0;
+    %addi 1, 0, 8;
+    %store/vec4 v00000000001b67c0_0, 0, 8;
+    %jmp T_0.1;
+T_0.0 ;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v00000000001b67c0_0, 0, 8;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "ProgramCounter.v";
