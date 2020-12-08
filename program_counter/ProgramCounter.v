@@ -1,7 +1,3 @@
-// clk: el reloj (entrada) 
-// reset: pone a cero el contador sincrónicamente (entrada) 
-// cnt: la salida del contador (salida) 
-
 `timescale 1ns/1ns
 
 module Programcounter (clk, reset, cont);
@@ -14,10 +10,8 @@ output	[7:0]	cont;//contador
 reg	[7:0]	cont;
 
 always @(posedge clk)
-
 	if (!reset)
 		cont = cont + 1;
 	else
 		cont = 0;
-
 endmodule
