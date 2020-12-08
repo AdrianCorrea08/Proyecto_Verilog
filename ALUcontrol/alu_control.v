@@ -25,7 +25,6 @@ input [1:0] ALUop;
 input [2:0] FuncCode; ///FUNCT3 3 BITS [14-12]
 input FuncCodeSeven; //FUCT 7 POS 30
 output reg[3:0] ALU_Cnt;
-
 input wire [5:0] ALUControlIn;
 
 assign ALUControlIn = {ALUop,FuncCode,FuncCodeSeven};
