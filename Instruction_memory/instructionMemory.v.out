@@ -10,7 +10,7 @@
 S_0000000000a065d0 .scope module, "InstructionMemory" "InstructionMemory" 2 1;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "clk";
-    .port_info 1 /INPUT 8 "address";
+    .port_info 1 /INPUT 32 "address";
     .port_info 2 /OUTPUT 32 "instruction";
 v0000000000a06760 .array "Imem", 4 0, 31 0;
 o00000000008a6f98 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
