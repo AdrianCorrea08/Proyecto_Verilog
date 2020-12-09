@@ -27,5 +27,4 @@ always @(posedge clk) begin
     ReadData <= MEMO[Adress];
   end
 end
-
 endmodule
