@@ -294,7 +294,7 @@ end
 endmodule
 
 //MULTIPLEXOR DATAMEMORY
-module multiplexorShiftLeft(i3,i4,selectMemory,outMulti);
+module multiplexorDataMemory(i3,i4,selectMemory,outMulti);
   input [11:0] i3;
   input [71:0] i4;
   input selectMemory;
@@ -435,7 +435,7 @@ data_memory data_memory_instance(
     .ReadData(conexion20)      
 );
 
-multiplexorShiftLeft multiplexorShiftLeft_instance(
+multiplexorDataMemory multiplexorDataMemory_instance(
     .i3(conexion16),//0 
     .i4(conexion20),  //1
     .selectMemory(conexion19),
