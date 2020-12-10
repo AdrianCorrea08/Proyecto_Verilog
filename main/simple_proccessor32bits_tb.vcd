@@ -1,0 +1,653 @@
+$date
+	Thu Dec 10 03:26:01 2020
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module simple_proccessor32bits_tb $end
+$var reg 1 ! clk $end
+$var reg 1 " reset $end
+$scope module simple_proccessor32bitstb $end
+$var wire 1 ! clk $end
+$var wire 1 " reset $end
+$var wire 1 # conexion9 $end
+$var wire 4 $ conexion8 [3:0] $end
+$var wire 2 % conexion7 [1:0] $end
+$var wire 1 & conexion6 $end
+$var wire 64 ' conexion5 [63:0] $end
+$var wire 64 ( conexion4 [63:0] $end
+$var wire 64 ) conexion3 [63:0] $end
+$var wire 64 * conexion22 [63:0] $end
+$var wire 64 + conexion21 [63:0] $end
+$var wire 64 , conexion20 [63:0] $end
+$var wire 32 - conexion2 [31:0] $end
+$var wire 1 . conexion19 $end
+$var wire 1 / conexion18 $end
+$var wire 1 0 conexion17 $end
+$var wire 64 1 conexion16 [63:0] $end
+$var wire 64 2 conexion15 [63:0] $end
+$var wire 64 3 conexion14 [63:0] $end
+$var wire 1 4 conexion13 $end
+$var wire 64 5 conexion12 [63:0] $end
+$var wire 1 6 conexion11 $end
+$var wire 1 7 conexion10 $end
+$var wire 64 8 conexion1 [63:0] $end
+$scope module ALUcontrol_instance $end
+$var wire 3 9 FuncCode [2:0] $end
+$var wire 1 : FuncCodeSeven $end
+$var wire 2 ; ALUop [1:0] $end
+$var wire 6 < ALUControlIn [5:0] $end
+$var reg 4 = ALU_Cnt [3:0] $end
+$upscope $end
+$scope module Imm_Gen_instance $end
+$var wire 1 ! clk $end
+$var wire 32 > instruction_imm [31:0] $end
+$var wire 1 ? Data_2 $end
+$var wire 12 @ Data_1 [11:0] $end
+$var reg 1 A Cero $end
+$var reg 1 B One $end
+$var reg 64 C wireConection [63:0] $end
+$upscope $end
+$scope module RegisterMemory_instance $end
+$var wire 1 ! clk $end
+$var wire 5 D rd [4:0] $end
+$var wire 5 E rs1 [4:0] $end
+$var wire 5 F rs2 [4:0] $end
+$var wire 64 G WriteData [63:0] $end
+$var wire 1 & RegWrite $end
+$var wire 64 H Data2 [63:0] $end
+$var wire 64 I Data1 [63:0] $end
+$upscope $end
+$scope module addFour_instance $end
+$var wire 1 J clk $end
+$var wire 64 K cont [63:0] $end
+$var reg 64 L salidaAddFour [63:0] $end
+$upscope $end
+$scope module addLeft_instance $end
+$var wire 1 ! clk $end
+$var wire 64 M shiftLef [63:0] $end
+$var wire 64 N contProgramData [63:0] $end
+$var reg 64 O salidaAddLeft [63:0] $end
+$upscope $end
+$scope module alu_instance $end
+$var wire 64 P A [63:0] $end
+$var wire 4 Q ALUcontrol [3:0] $end
+$var wire 1 6 Zero $end
+$var wire 64 R B [63:0] $end
+$var reg 64 S ALUresult [63:0] $end
+$upscope $end
+$scope module andGate_instance $end
+$var wire 1 6 E $end
+$var wire 1 4 out $end
+$var wire 1 7 D $end
+$upscope $end
+$scope module control_unit_instance $end
+$var wire 7 T opcode [6:0] $end
+$var reg 1 # aluSrc $end
+$var reg 2 U alu_op [1:0] $end
+$var reg 1 7 branch $end
+$var reg 1 / memRead $end
+$var reg 1 . memToReg $end
+$var reg 1 0 memWrite $end
+$var reg 1 & regWrite $end
+$upscope $end
+$scope module data_memory_instance $end
+$var wire 64 V Adress [63:0] $end
+$var wire 1 / MemRead $end
+$var wire 1 0 MemWrite $end
+$var wire 64 W WriteData [63:0] $end
+$var wire 1 ! clk $end
+$var reg 64 X ReadData [63:0] $end
+$var reg 64 Y i [63:0] $end
+$upscope $end
+$scope module im_instance $end
+$var wire 1 ! clk $end
+$var wire 64 Z address [63:0] $end
+$var reg 32 [ instruction [31:0] $end
+$var reg 8 \ memAddr [7:0] $end
+$upscope $end
+$scope module multiplexorDataMemory_instance $end
+$var wire 64 ] i3 [63:0] $end
+$var wire 64 ^ i4 [63:0] $end
+$var wire 1 . selectMemory $end
+$var reg 64 _ outMulti [63:0] $end
+$upscope $end
+$scope module multiplexorShiftLeft_instance $end
+$var wire 64 ` i0 [63:0] $end
+$var wire 64 a i1 [63:0] $end
+$var wire 1 4 select $end
+$var reg 64 b y [63:0] $end
+$upscope $end
+$scope module multiplexor_bh_intance $end
+$var wire 64 c i0 [63:0] $end
+$var wire 64 d i1 [63:0] $end
+$var wire 1 # select $end
+$var reg 64 e y [63:0] $end
+$upscope $end
+$scope module pc_instance $end
+$var wire 64 f add [63:0] $end
+$var wire 1 ! clk $end
+$var wire 1 " reset $end
+$var reg 64 g cont [63:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx g
+bx f
+bx e
+bx d
+b0xxxxx c
+bx b
+bx a
+bx `
+bx _
+b0 ^
+b0 ]
+bx \
+bx [
+bx Z
+b1111111111 Y
+b0 X
+b0xxxxx W
+b0 V
+bx U
+bx T
+b0 S
+bx R
+bx Q
+b0xxxxx P
+bx O
+bx N
+bx M
+bx L
+bx K
+zJ
+b0xxxxx I
+b0xxxxx H
+bx G
+bx F
+bx E
+bx D
+bx C
+1B
+0A
+bx @
+x?
+bx >
+bx =
+bx <
+bx ;
+x:
+bx 9
+bx 8
+x7
+16
+bx 5
+x4
+bx 3
+bx 2
+b0 1
+x0
+x/
+x.
+bx -
+b0 ,
+bx +
+bx *
+b0xxxxx )
+b0xxxxx (
+bx '
+x&
+bx %
+bx $
+x#
+0"
+0!
+$end
+#10000
+b0x 3
+b0x C
+b0x M
+b0x d
+1!
+#20000
+0!
+#30000
+1!
+#40000
+0!
+#50000
+1!
+#60000
+0!
+#70000
+b0 8
+b0 K
+b0 N
+b0 Z
+b0 g
+1!
+1"
+#80000
+0!
+#90000
+b0 +
+b0 G
+b0 _
+16
+b0 1
+b0 S
+b0 V
+b0 ]
+04
+b0 $
+b0 =
+b0 Q
+1&
+0#
+00
+0.
+0/
+07
+b10 %
+b10 ;
+b10 U
+0?
+b11 @
+0:
+b10 <
+b0 9
+b110011 T
+b1 D
+b11 )
+b11 H
+b11 W
+b11 c
+b11 F
+b10 (
+b10 I
+b10 P
+b10 E
+b1100010000000010110011 -
+b1100010000000010110011 >
+b1100010000000010110011 [
+b0 \
+b0x0 2
+b0x0 O
+b0x0 a
+1!
+#100000
+0!
+#110000
+b10 +
+b10 G
+b10 _
+06
+b10 1
+b10 S
+b10 V
+b10 ]
+b11 '
+b11 R
+b11 e
+b0 3
+b0 C
+b0 M
+b0 d
+1!
+#120000
+0!
+#130000
+b0 2
+b0 O
+b0 a
+1!
+#140000
+0!
+0"
+#150000
+b1 8
+b1 K
+b1 N
+b1 Z
+b1 g
+1!
+#160000
+0!
+#170000
+b10 8
+b10 K
+b10 N
+b10 Z
+b10 g
+b0xxxxx +
+b0xxxxx G
+b0xxxxx _
+b0xxxxx '
+b0xxxxx R
+b0xxxxx e
+x6
+b0xxxxx 1
+b0xxxxx S
+b0xxxxx V
+b0xxxxx ]
+x?
+bx @
+x:
+bx10 <
+bx 9
+bx T
+bx D
+b0xxxxx )
+b0xxxxx H
+b0xxxxx W
+b0xxxxx c
+bx F
+b0xxxxx (
+b0xxxxx I
+b0xxxxx P
+bx E
+bx -
+bx >
+bx [
+b1 \
+1!
+#180000
+0!
+#190000
+b11 8
+b11 K
+b11 N
+b11 Z
+b11 g
+b0x 3
+b0x C
+b0x M
+b0x d
+b10 \
+1!
+#200000
+0!
+#210000
+b0 8
+b0 K
+b0 N
+b0 Z
+b0 g
+b11 \
+b0x0000 2
+b0x0000 O
+b0x0000 a
+1!
+1"
+#220000
+0!
+#230000
+06
+b10 +
+b10 G
+b10 _
+b11 '
+b11 R
+b11 e
+b10 1
+b10 S
+b10 V
+b10 ]
+0?
+b11 @
+0:
+b10 <
+b0 9
+b110011 T
+b1 D
+b11 )
+b11 H
+b11 W
+b11 c
+b11 F
+b10 (
+b10 I
+b10 P
+b10 E
+b0x0 2
+b0x0 O
+b0x0 a
+b1100010000000010110011 -
+b1100010000000010110011 >
+b1100010000000010110011 [
+b0 \
+1!
+#240000
+0!
+#250000
+b0 2
+b0 O
+b0 a
+b0 3
+b0 C
+b0 M
+b0 d
+1!
+#260000
+0!
+#270000
+1!
+#280000
+0!
+0"
+#290000
+b1 8
+b1 K
+b1 N
+b1 Z
+b1 g
+1!
+#300000
+0!
+#310000
+b10 8
+b10 K
+b10 N
+b10 Z
+b10 g
+b0xxxxx +
+b0xxxxx G
+b0xxxxx _
+b0xxxxx '
+b0xxxxx R
+b0xxxxx e
+x6
+b0xxxxx 1
+b0xxxxx S
+b0xxxxx V
+b0xxxxx ]
+x?
+bx @
+x:
+bx10 <
+bx 9
+bx T
+bx D
+b0xxxxx )
+b0xxxxx H
+b0xxxxx W
+b0xxxxx c
+bx F
+b0xxxxx (
+b0xxxxx I
+b0xxxxx P
+bx E
+bx -
+bx >
+bx [
+b1 \
+1!
+#320000
+0!
+#330000
+b11 8
+b11 K
+b11 N
+b11 Z
+b11 g
+b10 \
+b0x000 2
+b0x000 O
+b0x000 a
+b0x 3
+b0x C
+b0x M
+b0x d
+1!
+#340000
+0!
+#350000
+b0 8
+b0 K
+b0 N
+b0 Z
+b0 g
+b0x0000 2
+b0x0000 O
+b0x0000 a
+b11 \
+1!
+1"
+#360000
+0!
+#370000
+06
+b10 +
+b10 G
+b10 _
+b11 '
+b11 R
+b11 e
+b10 1
+b10 S
+b10 V
+b10 ]
+0?
+b11 @
+0:
+b10 <
+b0 9
+b110011 T
+b1 D
+b11 )
+b11 H
+b11 W
+b11 c
+b11 F
+b10 (
+b10 I
+b10 P
+b10 E
+b1100010000000010110011 -
+b1100010000000010110011 >
+b1100010000000010110011 [
+b0 \
+b0x0 2
+b0x0 O
+b0x0 a
+1!
+#380000
+0!
+#390000
+b0 3
+b0 C
+b0 M
+b0 d
+1!
+#400000
+0!
+#410000
+b0 2
+b0 O
+b0 a
+1!
+#420000
+0!
+0"
+#430000
+b1 8
+b1 K
+b1 N
+b1 Z
+b1 g
+1!
+#440000
+0!
+#450000
+b10 8
+b10 K
+b10 N
+b10 Z
+b10 g
+b0xxxxx +
+b0xxxxx G
+b0xxxxx _
+b0xxxxx '
+b0xxxxx R
+b0xxxxx e
+x6
+b0xxxxx 1
+b0xxxxx S
+b0xxxxx V
+b0xxxxx ]
+x?
+bx @
+x:
+bx10 <
+bx 9
+bx T
+bx D
+b0xxxxx )
+b0xxxxx H
+b0xxxxx W
+b0xxxxx c
+bx F
+b0xxxxx (
+b0xxxxx I
+b0xxxxx P
+bx E
+bx -
+bx >
+bx [
+b1 \
+1!
+#460000
+0!
+#470000
+b11 8
+b11 K
+b11 N
+b11 Z
+b11 g
+b0x 3
+b0x C
+b0x M
+b0x d
+b10 \
+1!
+#480000
+0!
+#490000
+b0 8
+b0 K
+b0 N
+b0 Z
+b0 g
+b11 \
+b0x0000 2
+b0x0000 O
+b0x0000 a
+1!
+1"

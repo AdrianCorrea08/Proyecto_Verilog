@@ -7,7 +7,7 @@ input	[63:0]	address;
 output	[31:0]	instruction;
 reg	[31:0]	instruction;
 reg	[7:0]	memAddr;
-reg	[31:0]	Imem[0:0];
+reg	[31:0]	Imem[0:1];
 initial	
 	$readmemb ("Instruction.txt", Imem);
 always @(posedge clk) begin
@@ -49,8 +49,8 @@ output  [63:0] Data1;
 output  [63:0] Data2;    
 reg [63:0] RF [63:0];
 
-assign Data1 = {59'b00000000000000000000000000000000000000000000000000000000000,rs1};                         //64'b0000000000000000000000000000000000000000000000000000000000000010;//RF[rs1];
-assign Data2 = {59'b00000000000000000000000000000000000000000000000000000000000,rs2};//RF[rs2];
+assign Data1 = {59'b0000000000000000000000000000000000000000000000000000000000,rs1};                         //64'b0000000000000000000000000000000000000000000000000000000000000010;//RF[rs1];
+assign Data2 = 64'b0000000000000000000000000000000000000000000000000000000000000011;//RF[rs2];
 always @ (posedge clk ) begin
   if(RegWrite) begin
     RF[rd] <= WriteData;
@@ -186,7 +186,7 @@ input FuncCodeSeven; //FUCT 7 POS 30
 output reg[3:0] ALU_Cnt;
 input wire [5:0] ALUControlIn;
 
-assign ALUControlIn = {FuncCodeSeven,FuncCode,ALUop};
+assign ALUControlIn = {ALUop,FuncCode,FuncCodeSeven};
  always @(ALUControlIn)
     casex (ALUControlIn)
         6'b100000: ALU_Cnt=4'b0010;  //add
