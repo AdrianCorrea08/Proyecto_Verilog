@@ -113,7 +113,7 @@ module control_unit(
         end
         7'b0110011: //SUBSTRACT
         begin
-            alu_op =   2'b01;
+            alu_op =   2'b10;
             branch =   1'b0;
             memRead =  1'b0;
             memToReg = 1'b0;
@@ -155,12 +155,13 @@ module control_unit(
         end
         7'b0100011: //SD
         begin
-        alu_op =   2'b10;
+        alu_op =   2'b00;
         branch =   1'b0;
         memRead =  1'b0;
         memWrite = 1'b1;
         aluSrc =   1'b1;
         regWrite = 1'b0;
+        memToReg = 1'bx;
 
 
         end
@@ -172,6 +173,7 @@ module control_unit(
         memWrite = 1'b0;
         aluSrc =   1'b0;
         regWrite = 1'b0;
+        memToReg = 1'bx;
         end
    endcase 
    end
@@ -186,11 +188,11 @@ input FuncCodeSeven; //FUCT 7 POS 30
 output reg[3:0] ALU_Cnt;
 input wire [5:0] ALUControlIn;
 
-assign ALUControlIn = {FuncCodeSeven,FuncCode,ALUop};
+assign ALUControlIn = {ALUop,FuncCode,FuncCodeSeven};
  always @(ALUControlIn)
     casex (ALUControlIn)
         6'b100000: ALU_Cnt=4'b0010;  //add
-        6'b010000: ALU_Cnt=4'b0110;  //sub
+        6'b100001: ALU_Cnt=4'b0110;  //sub
         6'b101110: ALU_Cnt=4'b0000;  //and
         6'b101100: ALU_Cnt=4'b0001;  //or
         6'b00011x: ALU_Cnt=4'b0010;  //ld

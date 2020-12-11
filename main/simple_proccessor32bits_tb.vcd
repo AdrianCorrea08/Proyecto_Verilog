@@ -1,5 +1,5 @@
 $date
-	Thu Dec 10 03:26:01 2020
+	Thu Dec 10 22:22:57 2020
 $end
 $version
 	Icarus Verilog
@@ -246,9 +246,9 @@ b0 S
 b0 V
 b0 ]
 04
-b0 $
-b0 =
-b0 Q
+b10 $
+b10 =
+b10 Q
 1&
 0#
 00
@@ -261,7 +261,7 @@ b10 U
 0?
 b11 @
 0:
-b10 <
+b100000 <
 b0 9
 b110011 T
 b1 D
@@ -285,14 +285,14 @@ b0x0 a
 #100000
 0!
 #110000
-b10 +
-b10 G
-b10 _
+b101 +
+b101 G
+b101 _
 06
-b10 1
-b10 S
-b10 V
-b10 ]
+b101 1
+b101 S
+b101 V
+b101 ]
 b11 '
 b11 R
 b11 e
@@ -326,21 +326,21 @@ b10 K
 b10 N
 b10 Z
 b10 g
-b0xxxxx +
-b0xxxxx G
-b0xxxxx _
+bx +
+bx G
+bx _
 b0xxxxx '
 b0xxxxx R
 b0xxxxx e
 x6
-b0xxxxx 1
-b0xxxxx S
-b0xxxxx V
-b0xxxxx ]
+bx 1
+bx S
+bx V
+bx ]
 x?
 bx @
 x:
-bx10 <
+b10xxxx <
 bx 9
 bx T
 bx D
@@ -389,21 +389,21 @@ b0x0000 a
 #220000
 0!
 #230000
+b101 +
+b101 G
+b101 _
 06
-b10 +
-b10 G
-b10 _
+b101 1
+b101 S
+b101 V
+b101 ]
 b11 '
 b11 R
 b11 e
-b10 1
-b10 S
-b10 V
-b10 ]
 0?
 b11 @
 0:
-b10 <
+b100000 <
 b0 9
 b110011 T
 b1 D
@@ -457,21 +457,21 @@ b10 K
 b10 N
 b10 Z
 b10 g
-b0xxxxx +
-b0xxxxx G
-b0xxxxx _
+bx +
+bx G
+bx _
 b0xxxxx '
 b0xxxxx R
 b0xxxxx e
 x6
-b0xxxxx 1
-b0xxxxx S
-b0xxxxx V
-b0xxxxx ]
+bx 1
+bx S
+bx V
+bx ]
 x?
 bx @
 x:
-bx10 <
+b10xxxx <
 bx 9
 bx T
 bx D
@@ -523,21 +523,21 @@ b11 \
 #360000
 0!
 #370000
+b101 +
+b101 G
+b101 _
 06
-b10 +
-b10 G
-b10 _
+b101 1
+b101 S
+b101 V
+b101 ]
 b11 '
 b11 R
 b11 e
-b10 1
-b10 S
-b10 V
-b10 ]
 0?
 b11 @
 0:
-b10 <
+b100000 <
 b0 9
 b110011 T
 b1 D
@@ -591,21 +591,21 @@ b10 K
 b10 N
 b10 Z
 b10 g
-b0xxxxx +
-b0xxxxx G
-b0xxxxx _
+bx +
+bx G
+bx _
 b0xxxxx '
 b0xxxxx R
 b0xxxxx e
 x6
-b0xxxxx 1
-b0xxxxx S
-b0xxxxx V
-b0xxxxx ]
+bx 1
+bx S
+bx V
+bx ]
 x?
 bx @
 x:
-bx10 <
+b10xxxx <
 bx 9
 bx T
 bx D
